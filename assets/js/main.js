@@ -4,8 +4,8 @@ const Home = {
 
     <main id='home'>
         <div class="about__me">
-            <img src="./assets/img/avatar.svg" alt="user avatar">
-            <h1>John Doe</h1>
+            <img src="./assets/img/avatar.jpg" alt="user avatar">
+            <h1>Marlon Dela Torre</h1>
             <h3>Python Expert</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <div class="skills_projects_link">
@@ -21,9 +21,9 @@ const Projects = {
         
         <header id="site_header" class="container d_flex">
             <div class="bio__media">
-                <img src="./assets/img/avatar.svg" alt="user avatar">
+                <img src="./assets/img/avatar.jpg" alt="user avatar">
                 <div class="bio__media__text">
-                    <h1>John Doe</h1>
+                    <h1>Marlon Dela Torre</h1>
                     <h3>Python Expert</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
@@ -116,14 +116,14 @@ const Projects = {
       page: 1,
       loading: true,
       errors: false,
-      gitHubLink: "https://github.com/fbhood",
+      gitHubLink: "https://github.com/feeling-free",
     };
   },
   methods: {
     fetchData: function () {
       axios
         .get(
-          `https://api.github.com/users/fbhood/repos?per_page=${this.perPage}&page=${this.page}`
+          `https://api.github.com/users/feeling-free/repos?per_page=${this.perPage}&page=${this.page}`
         )
         .then((response) => {
           console.log(response);
