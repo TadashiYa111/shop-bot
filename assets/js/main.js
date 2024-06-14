@@ -9,7 +9,7 @@ const Home = {
             <h3>Python Expert</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <div class="skills_projects_link">
-                <router-link to="/projects"> Projects | Skills </router-link>
+                <router-link to="/internal"> Projects | Skills </router-link>
             </div>
         </div>
     </main>
@@ -183,16 +183,17 @@ const Projects = {
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/projects", component: Projects },
+  { path: "/internal", component: Projects },
 ];
 
 // create the router instance
-const router = new VueRouter({
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHashHistory(),
   routes,
 });
 
 // create and mount the vue instance
+const app = Vue.createApp({});
 
-const app = new Vue({
-  router,
-}).$mount("#app");
+app.use(router);
+app.mount("#app");
